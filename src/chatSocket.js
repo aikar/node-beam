@@ -248,7 +248,7 @@ var ChatSocket = function (nodeBeam, user, channel) {
                     eventMessage.data.cleanMessage = '';
                     eventMessage.data.emotes = [];
 
-                    eventMessage.data.message.forEach(function (messagePart) {
+                    eventMessage.data.message.message.forEach(function (messagePart) {
                         if (messagePart.type == 'text') {
                             eventMessage.data.cleanMessage += messagePart.data;
                         } else {
@@ -379,7 +379,7 @@ var ChatSocket = function (nodeBeam, user, channel) {
                         if (message.data.authenticated) {
                             ChatLogger.info('[' + channel.token + '] Authenticated');
                             that.interval = setInterval(function () {
-                                client.send({});
+                                client.send("");
                             }, 3e4);
                             that.role = message.data.role;
                             that.emit('channel:join', channel, reconnecting);
