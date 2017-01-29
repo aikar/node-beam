@@ -1,4 +1,6 @@
 # node-beam
+
+[![Greenkeeper badge](https://badges.greenkeeper.io/aikar/node-beam.svg)](https://greenkeeper.io/)
 Node.JS package for Beam.pro
 
 **Note** This is an alpha version - things can, and will, change.
